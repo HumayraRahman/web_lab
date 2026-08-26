@@ -1,0 +1,189 @@
+/* Page */
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f1f5f9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+
+/* Main To-Do Container */
+.todo-container {
+    width: 600px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Heading */
+h1 {
+    text-align: center;
+
+    font-size: 45px;
+
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    color: #111827;
+}
+
+
+/* Input Area */
+.input-area {
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Input */
+#taskInput {
+    flex: 1;
+
+    padding: 16px;
+
+    font-size: 18px;
+
+    border: 2px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+}
+
+
+/* Input focus */
+#taskInput:focus {
+    border-color: #22c55e;
+}
+
+
+/* Add Button */
+#addButton {
+    padding: 0 28px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: white;
+
+    background-color: #22a65a;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+/* Add button hover */
+#addButton:hover {
+    background-color: #168746;
+}
+
+
+/* Task List */
+#taskList {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+/* Individual Task */
+.task-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+
+    background-color: white;
+}
+
+
+/* Left side of task */
+.task-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* Checkbox */
+.task-checkbox {
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+
+    accent-color: #22a65a;
+}
+
+
+/* Task text */
+.task-text {
+    font-size: 20px;
+
+    color: #111827;
+
+    cursor: pointer;
+}
+
+
+/* Completed task */
+.completed {
+    text-decoration: line-through;
+
+    color: #6b7280;
+}
+
+
+/* Delete button */
+.delete-button {
+    background: transparent;
+
+    border: none;
+
+    color: #ef4444;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* Delete button hover */
+.delete-button:hover {
+    color: #b91c1c;
+}
