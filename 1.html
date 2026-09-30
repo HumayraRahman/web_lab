@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokémon Card Explorer</title>
+
+    <link rel="stylesheet" href="2.css">
+</head>
+
+<body>
+
+    
+
+    <div id="boosterOverlay" class="booster-overlay">
+
+        <div class="booster-content">
+
+            <h1>Welcome, Trainer!</h1>
+
+            <p>
+                Your booster pack is opening...
+            </p>
+
+            <!-- Booster Pack -->
+
+            <div id="boosterPack" class="booster-pack">
+
+                <div class="pack-top"></div>
+
+                <div class="pack-ball">
+
+                    <div class="ball-line"></div>
+
+                    <div class="ball-center"></div>
+
+                </div>
+
+                <div class="pack-logo">
+                    POKÉMON
+                </div>
+
+                <div class="pack-title">
+                    CARD EXPLORER
+                </div>
+
+            </div>
+
+            <div id="openingText" class="opening-text">
+                ✨ Preparing your card... ✨
+            </div>
+
+        </div>
+
+    </div>
+
+<div class="background-pokeballs">
+    <div class="bg-pokeball ball1"></div>
+    <div class="bg-pokeball ball2"></div>
+    <div class="bg-pokeball ball3"></div>
+    <div class="bg-pokeball ball4"></div>
+    <div class="bg-pokeball ball5"></div>
+    <div class="bg-pokeball ball6"></div>
+    <div class="bg-pokeball ball7"></div>
+    <div class="bg-pokeball ball8"></div>
+    <div class="bg-pokeball ball9"></div>
+    <div class="bg-pokeball ball10"></div>
+    <div class="bg-pokeball ball11"></div>
+    <div class="bg-pokeball ball12"></div>
+    <div class="bg-pokeball ball13"></div>
+    <div class="bg-pokeball ball14"></div>
+    <div class="bg-pokeball ball15"></div>
+</div>
+    
+
+    <main class="main-container">
+
+
+
+        <header class="header">
+
+            <div class="brand">
+
+                <div class="pokeball-icon">
+                    <div></div>
+                </div>
+
+                <h2>
+                    Pokémon <span>Card Explorer</span>
+                </h2>
+
+            </div>
+
+        </header>
+
+
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    POKÉMON DATABASE
+                </p>
+
+                <h1>
+                    Explore <span>Pokémon</span>
+                </h1>
+
+                <p class="hero-description">
+                    Search your favorite Pokémon and discover their
+                    types, abilities, physical information and battle stats.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-section">
+
+                <div class="search-box">
+
+                    <span class="search-icon">
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search Pokémon name..."
+                        autocomplete="off"
+                    >
+
+                    <button id="searchBtn">
+                        Search
+                    </button>
+
+                </div>
+
+
+                <!-- QUICK SEARCH -->
+
+                <div class="quick-search">
+
+                    <span>
+                        Quick Search:
+                    </span>
+
+                    <button
+                        class="quick-btn"
+                        data-pokemon="pikachu">
+                        ⚡ Pikachu
+                    </button>
+
+                    <button
+                        class="quick-btn"
+                        data-pokemon="charizard">
+                        🔥 Charizard
+                    </button>
+
+                    <button
+                        class="quick-btn"
+                        data-pokemon="bulbasaur">
+                        🌱 Bulbasaur
+                    </button>
+
+                    <button
+                        class="quick-btn"
+                        data-pokemon="mewtwo">
+                        🧠 Mewtwo
+                    </button>
+
+                    <button
+                        class="quick-btn"
+                        data-pokemon="eevee">
+                        🦊 Eevee
+                    </button>
+
+                    <button
+                        class="quick-btn"
+                        data-pokemon="gengar">
+                        👻 Gengar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOADING -->
+
+        <div id="loading" class="loading hidden">
+
+            <div class="loader"></div>
+
+            <p>
+                Loading Pokémon...
+            </p>
+
+        </div>
+
+
+        <!-- ERROR -->
+
+        <div
+            id="errorMessage"
+            class="error-message hidden">
+
+            <div class="error-icon">
+                !
+            </div>
+
+            <div>
+
+                <strong>
+                    Pokémon not found
+                </strong>
+
+                <p>
+                    We couldn't find this Pokémon.
+                    Please check the name and try again.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             POKEMON CARD
+        ================================== -->
+
+        <section
+            id="pokemonCard"
+            class="pokemon-card hidden">
+
+
+            <!-- LEFT -->
+
+            <div class="card-left">
+
+                <div
+                    class="pokemon-number"
+                    id="pokemonNumber">
+                    #025
+                </div>
+
+
+                <div class="pokemon-image-container">
+
+                    <div class="image-glow"></div>
+
+                    <img
+                        id="pokemonImage"
+                        src=""
+                        alt="Pokémon"
+                    >
+
+                </div>
+
+                <!-- Ability below Pokémon image -->
+                <div class="photo-ability">
+                    <h3>Ability</h3>
+                    <div id="photoAbilityContainer" class="photo-ability-container"></div>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="card-right">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p class="card-label">
+                            POKÉMON
+                        </p>
+
+                        <h2 id="pokemonName">
+                            Pikachu
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        id="typeContainer"
+                        class="type-container">
+                    </div>
+
+                </div>
+
+
+                <!-- PHYSICAL INFORMATION -->
+
+                <div class="info-section">
+
+                    <h3>
+                        Physical Information
+                    </h3>
+
+                    <div class="info-grid">
+
+
+                        <div class="info-box">
+
+                            <span class="info-icon">
+                                📏
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Height
+                                </small>
+
+                                <strong id="pokemonHeight">
+                                    0 m
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-box">
+
+                            <span class="info-icon">
+                                ⚖️
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Weight
+                                </small>
+
+                                <strong id="pokemonWeight">
+                                    0 kg
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ABILITIES -->
+
+                <div class="info-section">
+
+                    <h3>
+                        Abilities
+                    </h3>
+
+                    <div
+                        id="abilitiesContainer"
+                        class="abilities-container">
+                    </div>
+
+                </div>
+
+
+                <!-- STATS -->
+
+                <div class="info-section stats-section">
+
+                    <h3>
+                        Base Stats
+                    </h3>
+
+                    <div id="statsContainer">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EMPTY STATE -->
+
+        <section
+            id="emptyState"
+            class="empty-state">
+
+            <div class="empty-pokeball">
+                <div></div>
+            </div>
+
+            <h2>
+                Choose a Pokémon
+            </h2>
+
+            <p>
+                Search for a Pokémon or use one of
+                the quick search buttons above.
+            </p>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                Pokémon Card Explorer
+            </p>
+
+            <span>
+                Data provided by PokéAPI
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="3.js"></script>
+
+</body>
+
+</html>

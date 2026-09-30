@@ -1,0 +1,1619 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f7f7f7;
+
+    color: #171717;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-container {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 0 25px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    padding: 28px 0;
+}
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.brand h2 {
+    font-size: 25px;
+
+    font-weight: 800;
+}
+
+.brand h2 span {
+    color: #e63946;
+}
+
+
+/* =========================================
+   POKEBALL ICON
+========================================= */
+
+.pokeball-icon {
+    width: 48px;
+    height: 48px;
+
+    border: 4px solid #222;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    background: linear-gradient(
+        to bottom,
+        #e53935 0%,
+        #e53935 47%,
+        #222 47%,
+        #222 53%,
+        #ffffff 53%,
+        #ffffff 100%
+    );
+}
+
+.pokeball-icon div {
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    background: white;
+
+    border: 4px solid #222;
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    text-align: center;
+
+    padding: 60px 0 40px;
+}
+
+.small-title {
+    color: #e63946;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 70px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #e63946;
+}
+
+.hero-description {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #777;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-section {
+    max-width: 850px;
+
+    margin: 35px auto 0;
+}
+
+.search-box {
+    display: flex;
+
+    align-items: center;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 15px;
+
+    padding: 8px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.search-icon {
+    font-size: 21px;
+
+    margin-left: 15px;
+
+    margin-right: 10px;
+}
+
+.search-box input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 16px;
+
+    padding: 15px 5px;
+}
+
+.search-box input::placeholder {
+    color: #aaa;
+}
+
+.search-box button {
+    border: none;
+
+    background: #e63946;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    padding: 15px 27px;
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.search-box button:hover {
+    background: #c92835;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   QUICK SEARCH
+========================================= */
+
+.quick-search {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.quick-search > span {
+    font-size: 14px;
+
+    color: #888;
+}
+
+.quick-btn {
+    border: 1px solid #e3e3e3;
+
+    background: white;
+
+    padding: 9px 14px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.quick-btn:hover {
+    border-color: #e63946;
+
+    color: #e63946;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.loading {
+    text-align: center;
+
+    padding: 40px;
+}
+
+.loader {
+    width: 45px;
+    height: 45px;
+
+    border: 5px solid #eee;
+
+    border-top: 5px solid #e63946;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    animation: spin 0.8s linear infinite;
+}
+
+.loading p {
+    margin-top: 15px;
+
+    color: #777;
+}
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error-message {
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    padding: 18px 20px;
+
+    background: #fff0f0;
+
+    border: 1px solid #ffcaca;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.error-icon {
+    width: 35px;
+    height: 35px;
+
+    background: #e63946;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+.error-message strong {
+    color: #c62828;
+}
+
+.error-message p {
+    margin-top: 4px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   POKEMON CARD
+========================================= */
+
+.pokemon-card {
+    max-width: 1050px;
+
+    margin: 50px auto;
+
+    background: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.12);
+
+    border: 1px solid #eee;
+}
+
+
+/* =========================================
+   CARD LEFT
+========================================= */
+
+.card-left {
+    position: relative;
+
+    min-height: 550px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e63946,
+            #b71c1c
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.pokemon-number {
+    position: absolute;
+
+    top: 25px;
+
+    left: 25px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.pokemon-image-container {
+    width: 330px;
+
+    height: 330px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.image-glow {
+    width: 270px;
+
+    height: 270px;
+
+    background:
+        rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    filter: blur(3px);
+}
+
+.pokemon-image-container img {
+    width: 300px;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    position: relative;
+
+    z-index: 2;
+
+    filter:
+        drop-shadow(
+            0 20px 15px rgba(0, 0, 0, 0.25)
+        );
+
+    transition: transform 0.3s;
+}
+
+.pokemon-image-container img:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   CARD RIGHT
+========================================= */
+
+.card-right {
+    padding: 40px;
+}
+
+.card-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.card-label {
+    color: #999;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+.card-heading h2 {
+    font-size: 42px;
+
+    text-transform: capitalize;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   TYPES
+========================================= */
+
+.type-container {
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+}
+
+.type-badge {
+    color: white;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+
+/* TYPE COLORS */
+
+.type-normal {
+    background: #8a8a8a;
+}
+
+.type-fire {
+    background: #f4511e;
+}
+
+.type-water {
+    background: #2980d9;
+}
+
+.type-electric {
+    background: #e4b400;
+}
+
+.type-grass {
+    background: #43a047;
+}
+
+.type-ice {
+    background: #42a5c6;
+}
+
+.type-fighting {
+    background: #a93226;
+}
+
+.type-poison {
+    background: #8e44ad;
+}
+
+.type-ground {
+    background: #a67c52;
+}
+
+.type-flying {
+    background: #607dca;
+}
+
+.type-psychic {
+    background: #d81b60;
+}
+
+.type-bug {
+    background: #719b27;
+}
+
+.type-rock {
+    background: #75644c;
+}
+
+.type-ghost {
+    background: #5e4b8b;
+}
+
+.type-dragon {
+    background: #4c51bf;
+}
+
+.type-dark {
+    background: #383838;
+}
+
+.type-steel {
+    background: #718096;
+}
+
+.type-fairy {
+    background: #d87aa7;
+}
+
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.info-section {
+    margin-top: 27px;
+}
+
+.info-section h3 {
+    font-size: 15px;
+
+    margin-bottom: 14px;
+}
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.info-box {
+    background: #f7f7f7;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.info-icon {
+    font-size: 22px;
+}
+
+.info-box small {
+    display: block;
+
+    color: #999;
+
+    margin-bottom: 4px;
+}
+
+.info-box strong {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   ABILITIES
+========================================= */
+
+.abilities-container {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.ability {
+    background: #fff4f4;
+
+    color: #d32f2f;
+
+    border: 1px solid #ffd5d5;
+
+    border-radius: 20px;
+
+    padding: 8px 13px;
+
+    font-size: 13px;
+
+    text-transform: capitalize;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stat-row {
+    margin-bottom: 13px;
+}
+
+.stat-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 6px;
+}
+
+.stat-name {
+    text-transform: capitalize;
+
+    font-size: 13px;
+
+    color: #555;
+}
+
+.stat-value {
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.stat-bar {
+    width: 100%;
+
+    height: 8px;
+
+    background: #eee;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+
+    background: #e63946;
+
+    border-radius: 20px;
+
+    width: 0;
+
+    transition: width 0.8s ease;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+    text-align: center;
+
+    padding: 70px 20px;
+
+    color: #999;
+}
+
+.empty-pokeball {
+    width: 70px;
+    height: 70px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    border: 5px solid #ddd;
+
+    background: linear-gradient(
+        to bottom,
+        #eee 0%,
+        #eee 47%,
+        #ccc 47%,
+        #ccc 53%,
+        white 53%,
+        white 100%
+    );
+
+    position: relative;
+}
+
+.empty-pokeball div {
+    position: absolute;
+
+    width: 22px;
+    height: 22px;
+
+    background: white;
+
+    border: 4px solid #bbb;
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.empty-state h2 {
+    margin-top: 20px;
+
+    color: #555;
+}
+
+.empty-state p {
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+
+    padding: 40px 0;
+
+    color: #999;
+
+    border-top: 1px solid #eee;
+
+    margin-top: 30px;
+}
+
+footer p {
+    font-weight: bold;
+
+    color: #555;
+
+    margin-bottom: 5px;
+}
+
+footer span {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   BOOSTER OVERLAY
+========================================= */
+
+.booster-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    background:
+        rgba(0, 0, 0, 0.94);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+
+/* After opening */
+
+.booster-overlay.hide {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BOOSTER CONTENT
+========================================= */
+
+.booster-content {
+    text-align: center;
+
+    color: white;
+}
+
+.booster-content h1 {
+    font-size: 45px;
+
+    margin-bottom: 12px;
+}
+
+.booster-content > p {
+    color: #bbb;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BOOSTER PACK
+========================================= */
+
+.booster-pack {
+    width: 325px;
+
+    height: 460px;
+
+    position: relative;
+
+    margin: auto;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f02735,
+            #a90e18
+        );
+
+    border: 6px solid white;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.7);
+}
+
+
+/* =========================================
+   PACK TOP
+========================================= */
+
+.pack-top {
+    height: 35px;
+
+    background: #ff7478;
+
+    border-bottom:
+        3px dashed white;
+}
+
+
+/* =========================================
+   PACK BALL
+========================================= */
+
+.pack-ball {
+    position: absolute;
+
+    width: 60px;
+
+    height: 60px;
+
+    left: 50%;
+
+    top: 130px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background: white;
+
+    border: 5px solid #f5c52d;
+
+    overflow: hidden;
+}
+
+.pack-ball::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 50%;
+
+    top: 0;
+
+    left: 0;
+
+    background: #ffdc5c;
+}
+
+.ball-line {
+    position: absolute;
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #f5c52d;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    z-index: 2;
+}
+
+.ball-center {
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    background: white;
+
+    border: 4px solid #f5c52d;
+
+    border-radius: 50%;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 3;
+}
+
+
+/* =========================================
+   PACK LOGO
+========================================= */
+
+.pack-logo {
+    position: absolute;
+
+    top: 190px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-7deg);
+
+    white-space: nowrap;
+
+    font-size: 40px;
+
+    font-weight: 900;
+
+    color: #ffdf24;
+
+    -webkit-text-stroke:
+        3px #1475e8;
+
+    text-shadow:
+        3px 4px 0 #0755a8;
+}
+
+
+/* =========================================
+   PACK TITLE
+========================================= */
+
+.pack-title {
+    position: absolute;
+
+    bottom: 45px;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   AUTO OPEN ANIMATION
+========================================= */
+
+/*
+   First the pack shakes,
+   then it becomes bigger,
+   then it disappears.
+*/
+
+.booster-pack.opening {
+    animation:
+        shakePack 0.7s ease-in-out,
+        openPack 1s ease-in-out 0.7s forwards;
+}
+
+
+/* SHAKE */
+
+@keyframes shakePack {
+
+    0% {
+        transform: translateX(0) rotate(0);
+    }
+
+    15% {
+        transform: translateX(-12px) rotate(-4deg);
+    }
+
+    30% {
+        transform: translateX(12px) rotate(4deg);
+    }
+
+    45% {
+        transform: translateX(-10px) rotate(-4deg);
+    }
+
+    60% {
+        transform: translateX(10px) rotate(4deg);
+    }
+
+    75% {
+        transform: translateX(-6px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0);
+    }
+}
+
+
+/* OPEN */
+
+@keyframes openPack {
+
+    0% {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotate(0);
+    }
+
+    35% {
+        opacity: 1;
+
+        transform:
+            scale(1.15)
+            rotate(-2deg);
+    }
+
+    70% {
+        opacity: 0.8;
+
+        transform:
+            scale(1.3)
+            rotate(4deg);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            scale(0.1)
+            rotate(25deg);
+    }
+}
+
+
+/* =========================================
+   OPENING TEXT
+========================================= */
+
+.opening-text {
+    margin-top: 35px;
+
+    color: #ffdc35;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    animation:
+        textPulse 1s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+/* =========================================
+   CARD REVEAL
+========================================= */
+
+.card-reveal {
+    animation:
+        cardReveal 0.8s ease;
+}
+
+@keyframes cardReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(50px)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .pokemon-card {
+        grid-template-columns: 1fr;
+    }
+
+    .card-left {
+        min-height: 400px;
+    }
+
+    .card-right {
+        padding: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .main-container {
+        padding: 0 15px;
+    }
+
+    .brand h2 {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding-top: 35px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .search-box {
+        flex-wrap: wrap;
+    }
+
+    .search-box input {
+        min-width: 150px;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .card-heading {
+        flex-direction: column;
+    }
+
+    .type-container {
+        justify-content: flex-start;
+    }
+
+    .card-heading h2 {
+        font-size: 34px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booster-content h1 {
+        font-size: 34px;
+    }
+
+    .booster-content > p {
+        font-size: 15px;
+    }
+
+    .booster-pack {
+        width: 280px;
+
+        height: 400px;
+    }
+
+    .pack-logo {
+        font-size: 33px;
+    }
+
+}
+
+/* =========================================
+   ABILITY BELOW POKÉMON IMAGE
+========================================= */
+
+.photo-ability {
+    position: relative;
+    z-index: 5;
+    margin-top: -5px;
+    text-align: center;
+    color: white;
+}
+
+.photo-ability h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.photo-ability-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.photo-ability-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: white;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: capitalize;
+    backdrop-filter: blur(5px);
+}
+/* =========================================
+   BACKGROUND POKÉ BALLS
+========================================= */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.background-pokeballs {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* Small Poké Ball */
+
+.bg-pokeball {
+    position: absolute;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        to bottom,
+        #e53935 0%,
+        #e53935 44%,
+        #222 44%,
+        #222 56%,
+        #ffffff 56%,
+        #ffffff 100%
+    );
+
+    border: 2px solid rgba(34, 34, 34, 0.25);
+
+    opacity: 0.15;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Center button */
+
+.bg-pokeball::after {
+    content: "";
+
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    background: white;
+
+    border: 2px solid #222;
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+/* =========================================
+   POSITIONS
+========================================= */
+
+.ball1 {
+    top: 8%;
+    left: 5%;
+}
+
+.ball2 {
+    top: 18%;
+    left: 20%;
+
+    width: 25px;
+    height: 25px;
+}
+
+.ball3 {
+    top: 7%;
+    right: 12%;
+
+    width: 50px;
+    height: 50px;
+}
+
+.ball4 {
+    top: 30%;
+    right: 4%;
+
+    width: 30px;
+    height: 30px;
+}
+
+.ball5 {
+    top: 45%;
+    left: 3%;
+
+    width: 45px;
+    height: 45px;
+}
+
+.ball6 {
+    top: 55%;
+    left: 18%;
+
+    width: 25px;
+    height: 25px;
+}
+
+.ball7 {
+    top: 68%;
+    right: 8%;
+
+    width: 45px;
+    height: 45px;
+}
+
+.ball8 {
+    top: 82%;
+    left: 7%;
+
+    width: 30px;
+    height: 30px;
+}
+
+.ball9 {
+    top: 92%;
+    left: 35%;
+
+    width: 40px;
+    height: 40px;
+}
+
+.ball10 {
+    top: 40%;
+    left: 50%;
+
+    width: 25px;
+    height: 25px;
+}
+
+.ball11 {
+    top: 20%;
+    right: 30%;
+
+    width: 30px;
+    height: 30px;
+}
+
+.ball12 {
+    top: 75%;
+    left: 50%;
+
+    width: 25px;
+    height: 25px;
+}
+
+.ball13 {
+    top: 88%;
+    right: 20%;
+
+    width: 35px;
+    height: 35px;
+}
+
+.ball14 {
+    top: 52%;
+    right: 25%;
+
+    width: 30px;
+    height: 30px;
+}
+
+.ball15 {
+    top: 32%;
+    left: 35%;
+
+    width: 22px;
+    height: 22px;
+}
